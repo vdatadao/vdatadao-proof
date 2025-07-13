@@ -48,6 +48,7 @@ class BlockchainClient:
         except Exception as e:
             logging.error(f"Error getting contributor file count: {str(e)}")
             return 0
+<<<<<<< HEAD
 
     def check_content_uniqueness(self, user_id: str, username: str) -> bool:
         """
@@ -72,3 +73,5 @@ class BlockchainClient:
         except Exception as e:
             logging.error(f"Error checking content uniqueness: {str(e)}")
             return True  # Hata durumunda benzersiz kabul et
+=======
+>>>>>>> origin/main

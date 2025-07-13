@@ -7,18 +7,30 @@ import jsonschema
 
 def validate_schema(input_data: Dict[str, Any]) -> Tuple[str, bool]:
     """
+<<<<<<< HEAD
     Validate input data against Instagram profile schema using jsonschema.
+=======
+    Validate input data against the Google profile schema using jsonschema.
+>>>>>>> origin/main
     
     Args:
         input_data: The JSON data to validate
         
     Returns:
         tuple[str, bool]: A tuple containing (schema_type, is_valid)
+<<<<<<< HEAD
         where schema_type is 'instagram-profile.json'
         and is_valid indicates if the schema validation passed
     """
     try:
         schema_type = 'instagram-profile.json'
+=======
+        where schema_type is 'google-profile.json'
+        and is_valid indicates if the schema validation passed
+    """
+    try:
+        schema_type = 'google-profile.json'
+>>>>>>> origin/main
         
         # Load the schema
         schema_path = os.path.join(os.path.dirname(__file__), '..', 'schemas', schema_type)

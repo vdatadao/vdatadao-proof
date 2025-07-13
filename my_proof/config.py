@@ -6,7 +6,11 @@ from typing import Optional
 class Settings(BaseSettings):
     """Global settings configuration using environment variables"""
 
+<<<<<<< HEAD
     DLP_ID: int = Field(default=139, description="Data Liquidity Pool ID")
+=======
+    DLP_ID: int = Field(default=41, description="Data Liquidity Pool ID")
+>>>>>>> origin/main
 
     DLP_CONTRACT_ADDRESS: str = Field(
         default="0x238CA43C9aaa98bc2C5C7672dc30125c30a805db",
@@ -38,6 +42,7 @@ class Settings(BaseSettings):
         default="/output", description="Directory where output files will be written"
     )
 
+<<<<<<< HEAD
     # Google OAuth (Instagram doğrulaması + Drive erişimi için)
     GOOGLE_TOKEN: Optional[str] = Field(
         default=None,
@@ -55,6 +60,13 @@ class Settings(BaseSettings):
     UPLOAD_SOURCE: str = Field(
         default="manual",
         description="Source of upload (manual, google_drive)",
+=======
+    # Google OAuth
+    GOOGLE_TOKEN: Optional[str] = Field(
+        default=None,
+        description="Google OAuth2 access token for user authentication",
+        min_length=20,
+>>>>>>> origin/main
     )
 
     class Config:

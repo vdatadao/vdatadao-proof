@@ -158,6 +158,7 @@ If you have suggestions for improving this template, please open an issue or sub
 ## License
 
 [MIT License](LICENSE)
+<<<<<<< HEAD
 
 ## Instagram Data Support
 
@@ -181,3 +182,5 @@ This proof system now supports Instagram data validation. Since Instagram API ac
 - `profile`: User profile information
 - `posts`: Array of user posts
 - `metadata`: Data collection information
+=======
+>>>>>>> origin/main
