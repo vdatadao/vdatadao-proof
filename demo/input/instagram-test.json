@@ -1,0 +1,14 @@
+{
+  "userId": "123456789",
+  "username": "incomplete_user",
+  "timestamp": 1742211639877,
+  "profile": {
+    "fullName": "Incomplete User",
+    "biography": "Incomplete profile"
+  },
+  "metadata": {
+    "source": "Instagram",
+    "collectionDate": "2025-03-17T11:40:39.877Z",
+    "dataType": "profile"
+  }
+}

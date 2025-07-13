@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Instagram Profile Schema",
+  "type": "object",
+  "required": ["userId", "username", "timestamp", "profile", "metadata"],
+  "properties": {
+    "userId": {
+      "type": "string",
+      "description": "Instagram user identifier"
+    },
+    "username": {
+      "type": "string",
+      "description": "Instagram username"
+    },
+    "timestamp": {
+      "type": "number",
+      "description": "Timestamp of the data collection in milliseconds"
+    },
+    "profile": {
+      "type": "object",
+      "required": ["fullName", "biography"],
+      "properties": {
+        "fullName": {
+          "type": "string",
+          "description": "User's full name"
+        },
+        "biography": {
+          "type": "string",
+          "description": "User's bio"
+        },
+        "website": {
+          "type": "string",
+          "description": "User's website URL"
+        },
+        "isPrivate": {
+          "type": "boolean",
+          "description": "Whether the account is private"
+        },
+        "isVerified": {
+          "type": "boolean",
+          "description": "Whether the account is verified"
+        },
+        "followersCount": {
+          "type": "number",
+          "description": "Number of followers"
+        },
+        "followingCount": {
+          "type": "number",
+          "description": "Number of accounts following"
+        },
+        "postsCount": {
+          "type": "number",
+          "description": "Number of posts"
+        }
+      }
+    },
+    "posts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Post ID"
+          },
+          "caption": {
+            "type": "string",
+            "description": "Post caption"
+          },
+          "mediaType": {
+            "type": "string",
+            "enum": ["IMAGE", "VIDEO", "CAROUSEL_ALBUM"],
+            "description": "Type of media"
+          },
+          "timestamp": {
+            "type": "number",
+            "description": "Post timestamp"
+          },
+          "likeCount": {
+            "type": "number",
+            "description": "Number of likes"
+          },
+          "commentCount": {
+            "type": "number",
+            "description": "Number of comments"
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["source", "collectionDate", "dataType"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "Source of the data"
+        },
+        "collectionDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date when the data was collected"
+        },
+        "dataType": {
+          "type": "string",
+          "description": "Type of data collected"
+        }
+      }
+    }
+  }
+} 
